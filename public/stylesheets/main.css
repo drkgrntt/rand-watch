@@ -1,0 +1,90 @@
+body {
+    background: rgb(200, 0, 0);
+    padding: 70px;
+    font-family: 'Bellefair', serif;
+}
+
+.thumbnail img {
+    width: 100%;
+}
+
+.thumbnail {
+    padding: 10px;
+    background-color: rgb(230, 230, 230);
+    text-align: center;
+    font-size: 25px;
+    box-shadow: 3px 3px 1px #888888;
+}
+
+.jumbotron {
+    color: rgb(0, 0, 0);
+    background-color: rgb(210, 210, 210);
+    box-shadow: 5px 5px 3px #888888;
+    padding: 30px;
+}
+
+.btn-sm {
+    color: black;
+    background-color: rgb(210, 210, 210);
+    border: 1px solid black;
+    margin: 0 auto;
+}
+
+hr { 
+  border: 0; 
+  height: 1px; 
+  background-image: -webkit-linear-gradient(left, rgb(200, 0, 0), gray, rgb(200, 0, 0));
+  background-image: -moz-linear-gradient(left, rgb(200, 0, 0), gray, rgb(200, 0, 0));
+  background-image: -ms-linear-gradient(left, rgb(200, 0, 0), gray, rgb(200, 0, 0));
+  background-image: -o-linear-gradient(left, rgb(200, 0, 0), gray, rgb(200, 0, 0)); 
+}
+
+.navbar-inverse .navbar-nav>li>a {
+	color: white;
+}
+
+.navbar-inverse .navbar-brand {
+	color: white;
+}
+
+#id {
+    color: black;
+}
+
+#id>a {
+    color: black;
+}
+
+.bigger {
+    font-size: 25px;
+    color: black;
+}
+
+#create-form {
+    width: 50%;
+    background-color: rgb(210, 210, 210);
+    border-radius: 25px;
+    padding: 30px;
+    box-shadow: 3px 3px 1px #888888;
+    margin: 0 auto;
+}
+
+img {
+    padding: 5px;
+}
+
+#profileP {
+    font-size: 30px;
+    margin: 0 auto;
+}
+
+.about {
+    padding: 30px;
+    background-color: rgba(230, 230, 230, 0.7);
+    box-shadow: 3px 3px 1px #888888;
+    border-radius: 25px;
+}
+
+.about p {
+    font-size: 15px;
+}

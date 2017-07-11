@@ -1,0 +1,25 @@
+<% include ./partials/header %>
+
+<div class=jumbotron>
+    <h1><%= currentUser.username %></h1>
+    <p>Here is your list.</p>
+</div>
+<div class="row" style="display:flex; flex-wrap: wrap;">
+    <% if(user != null){ %>
+        <% user.shows.forEach(function(movie){ %>
+            <div class="col-xs-6 col-md-4 col-lg-3">
+                <div class="thumbnail">
+                    <%= movie["Title"] %>
+                    <a href="http://www.imdb.com/title/<%= movie["imdbID"] %>">
+                        <img src=<%= movie["Poster"] %>>
+                    </a>
+                    <form action="/user/<%= currentUser._id %>/<%= movie._id %>?_method=DELETE" method="POST">
+                        <button class="btn btn-info">Remove from my list</button>
+                    </form>
+                </div>
+            </div>
+        <% }); %>
+    <% } %>
+</div>
+
+<% include ./partials/footer %>

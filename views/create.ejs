@@ -1,0 +1,19 @@
+<% include ./partials/header %>
+
+<div class="jumbotron">
+    <h1>Add your own film here!</h1>
+    <p>Couldn't find what you needed? Need to add a home movie? Use this form to include your own flim.</p>
+</div>
+<form id="create-form" action="/user/<%= currentUser._id %>" method="POST">
+    <div class="form-group">
+        <p class="bigger" for="title">Title<p>
+        <input type="text" class="form-control" id="title" name="show[Title]" placeholder="Movie or Series Title">
+    </div>
+    <div class="form-group">
+        <p class="bigger" for="picture">Film Art<p>
+        <input type="url" class="form-control" id="picture" name="show[Poster]" placeholder="Image URL">
+    </div>
+    <button type="submit" class="btn btn-danger">Submit!</button>
+</form>
+
+<% include ./partials/footer %>
