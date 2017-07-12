@@ -1,11 +1,11 @@
 /* global $ */
-/* global shows */
+/* global user */
 
 $("button").on("click", function() {
-    $.get("/user/:id/choose", function(shows) {
+    $.get("/user/:id/choose", function(user) {
         function chooseMovie() {
-            var random = Math.floor(Math.random() * shows.length);
-            return shows[random];
+            var random = Math.floor(Math.random() * user.shows.length);
+            return user.shows[random];
         }
         var chosenMovie = chooseMovie();
         $("#movie-title").html("<h1>" + chosenMovie.Title + "</h1>");

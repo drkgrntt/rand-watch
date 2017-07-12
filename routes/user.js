@@ -38,23 +38,16 @@ router.post("/", middleware.isLoggedIn, function(req, res){
 
 // CHOOSE PAGE
 router.get("/choose", middleware.isLoggedIn, function(req, res){
-    User.findById(req.params.id, function(err, user) {
+    User.findById(req.params.id).populate("shows").exec(function(err, user) {
         if(err) {
             console.log(err);
             res.redirect("back");
         } else {
-            Show.find({}, function(err, shows) {
-                if(err) {
-                    console.log(err);
-                    res.redirect("back");
-                } else {
-                    if(req.xhr) {
-                        res.json(shows);
-                    } else {
-                    res.render("choose", {user: user, shows: shows});
-                    }
-                }
-            });            
+            if(req.xhr) {
+                res.json(user);
+            } else {
+            res.render("choose", {user: user});
+            }          
         }
     });
 });
