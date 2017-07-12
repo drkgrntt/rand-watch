@@ -17,8 +17,9 @@ var express         = require("express"),
     indexRoutes     = require("./routes/index");
     
 // APP CONFIG
-// mongoose.connect("mongodb://localhost/randwatch");
-mongoose.connect("mongodb://drkgrntt:zeppelin4life@ds139288.mlab.com:39288/randwatch");
+var url = process.env.DATABASEURL || "mongodb://localhost/randwatch";
+mongoose.connect(url);
+
 mongoose.Promise = global.Promise;
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
